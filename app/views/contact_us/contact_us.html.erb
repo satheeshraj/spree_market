@@ -1,0 +1,100 @@
+
+  <meta charset="utf-8">
+  <title>spreeMarket</title>
+  <link href='/stylesheets/bootstrap/bootstrap.min.css' rel="stylesheet" type="text/css" />
+  <link href='/stylesheets/app.css' rel="stylesheet" type="text/css" />
+  <script src="/javascripts/jquery-1.11.1.min.js" type="text/javascript"></script>
+  <script src="/javascripts/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+  <nav class="navbar navbar-inverse" style="  padding: 15px;">
+    <div class="container" style="  max-width: 1040px;  margin-left: auto;  margin-right: auto;">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Brand</a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" style="  float: right !important;">
+          <li><a href="#" class="link">work</a></li>
+          <li><a href="#" class="link">services</a></li>
+          <li><a href="#" class="link">about us</a></li>
+          <li><a href="" class="link">contact us</a></li>
+          <li><a href="#" class="link">blog</a></li>
+          <li><a href="#" class="h_button" style="  margin: 0px 20px 0;">Link</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+ <div class="contact-us-form-wrapper">
+   <div class="submenu-section">
+     <ul id="contact-us-menu">
+       <li data-display="contact-form">
+         Contact US
+       </li>
+     </ul>
+   </div>
+
+   <div class="contact-form-section">
+     <form action="submit" method="post" class="contact_form">
+       <p>
+        <label id="name" name="contact_us[name]" type="text" >Name</label>
+        <input id="contact_us_name" class="text_box" name="person[first_name]" type="text" /><br />
+       </p>
+       <p>
+         <label id="email" name="contact_us[email]" type="text" >Email</label>
+         <input id="contact_us_email" class="text_box" name="person[first_name]" type="text" /><br />
+       </p>
+       <p>
+         <label id="message" name="contact_us[email]" type="text" >Message</label>
+         <textarea data-required="true" id="contact_us_message" name="message" rows="" cols="" class="text_box"></textarea>
+       </p>
+       <p>
+
+           <input id="detail_submit" class="button" value="send" type="button">
+
+       </p>
+     </form>
+   </div>
+   <div id="overlay" class="loading-overlay close-modal"></div>
+   <div class="notifications" id="notifications">
+    <div class="notification-close close-modal"></div>
+     <h3 class="notification notification-success ">
+       <div class="image_logo">
+
+       </div>
+       <%= "Thanks For Contacting Us" %>
+     </h3>
+     <h6>We'll reply as soon as possible.</h6>
+     <a href="#" class="button close-modal" style="width:21%;">Close</a>
+   </div>
+ </div>
+</div>
+
+  <script type="text/javascript">
+      var $form = $(".contact_form");
+      $('.close-modal').on('click',function(){
+          $(".notifications").remove();
+          $("#overlay").remove();
+      });
+      $('#detail_submit').on('click',function(){
+          var name = $("#contact_us_name").val();
+          var email = $("#contact_us_email").val();
+          var message = $("#contact_us_message").val();
+          $.ajax({
+              type: "POST",
+              url: $form.attr('action'),
+              data:{
+                client_name: name,
+                client_email: email,
+                client_message: message
+              }
+          });
+
+      });
+  </script>

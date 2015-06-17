@@ -6,7 +6,8 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/' => 'work#index'
-
+  get '/contact_us' => 'contact_us#contact_us'
+  post '/submit' => 'contact_us#submit'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
