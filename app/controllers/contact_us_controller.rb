@@ -8,8 +8,11 @@ class ContactUsController < ApplicationController
    name = params['client_name']
    email = params['client_email']
    message = params['client_message']
-    @post = Contact.build(:name=>name,:email=>email,:message=>message)
-    @post.save!
+    @post = Contact.new(:name=>name,:email=>email,:message=>message)
+    if @post.save!
+      render :json => {:status => "ok"}
+    end
+
 
   end
 

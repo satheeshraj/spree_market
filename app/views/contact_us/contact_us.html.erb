@@ -42,27 +42,46 @@
 
    <div class="contact-form-section">
      <form action="submit" method="post" class="contact_form">
-       <p>
-        <label id="name" name="contact_us[name]" type="text" >Name</label>
-        <input id="contact_us_name" class="text_box" name="person[first_name]" type="text" /><br />
-       </p>
-       <p>
-         <label id="email" name="contact_us[email]" type="text" >Email</label>
-         <input id="contact_us_email" class="text_box" name="person[first_name]" type="text" /><br />
-       </p>
-       <p>
-         <label id="message" name="contact_us[email]" type="text" >Message</label>
-         <textarea data-required="true" id="contact_us_message" name="message" rows="" cols="" class="text_box"></textarea>
-       </p>
-       <p>
+       <p style="margin: 0px 0px -33px;">
+        <label id="name" name="contact_us[name]" type="text" class="contents">Name</label>
+        <input id="contact_us_name" class="text_box" name="person[first_name]" type="text"/><br />
 
-           <input id="detail_submit" class="button" value="send" type="button">
-
+       </p>
+       <ul class="ul-error-list name_required" style="display:none">
+         <li>
+           This Value is required.
+         </li>
+       </ul>
+       <p style="margin: 0px 0px -33px;">
+         <label id="email" name="contact_us[email]" type="text" class="contents">Email</label>
+         <input id="contact_us_email" class="text_box" type="email" name="person[first_name]" onblur="validateEmail(this)" /><br />
+       </p>
+       <ul class="ul-error-list email_required" style="display:none;">
+         <li>
+           This Value is required.
+         </li>
+       </ul>
+       <ul class="ul-error-list invalid-email" style="display: none;">
+         <li>
+           This value should Valid Email
+         </li>
+       </ul>
+       <p>
+         <label id="message" name="contact_us[email]" type="text" class="contents">Message</label>
+         <textarea  id="contact_us_message" name="message" rows="" cols="" class="text_box"></textarea>
+       </p>
+       <ul class="ul-error-list message_required" style="display:none;">
+         <li>
+           This Value is required.
+         </li>
+       </ul>
+       <p>
+           <input id="detail_submit" class="button" value="send" type="button" style="font-size: 1.200em;">
        </p>
      </form>
    </div>
-   <div id="overlay" class="loading-overlay close-modal"></div>
-   <div class="notifications" id="notifications">
+   <div id="overlay" class="loading-overlay close-modal" style="display: none;"></div>
+   <div class="notifications" id="notifications" style="display: none;">
     <div class="notification-close close-modal"></div>
      <h3 class="notification notification-success ">
        <div class="image_logo">
@@ -74,27 +93,134 @@
      <a href="#" class="button close-modal" style="width:21%;">Close</a>
    </div>
  </div>
+
+
+  <div class="contact-us-info-section">
+    <h4>Pescara</h4>
+    <p style="line-height: 2em;">
+      <a target="blank" href="tel:+3908551500">(+39) 085 51500</a>
+      <a target="blank" href="https://goo.gl/maps/Pogvy">Via Cetteo Ciglia, 70</a>
+      <a target="blank" href="https://goo.gl/maps/Pogvy">65128 Pescara, Italy</a>
+    </p>
+    <h4>Latina</h4>
+    <p style="line-height: 2em;">
+      <a target="blank" href="tel:+390773602361">(+39) 0773 602361</a>
+      <a target="blank" href="//goo.gl/Rggbdk">Via Ufente, 20</a>
+      <a target="blank" href="//goo.gl/Rggbdk">04100 Latina, Italy</a>
+    </p>
+    <h4>Email</h4>
+    <p>
+      <a target="blank" href="">admin email</a>
+    </p>
+      <ul class="icons social-networks">
+        <li>
+          <a target="blank" href="">
+            <img src="images/twit_new.png" style="width: 15%">
+          </a>
+        </li>
+        <li>
+          <a target="blank" href="">
+            <img src="images/git_new.png" style="width: 15%">
+          </a>
+        </li>
+        <li>
+          <a target="blank" href="">
+            <img src="images/fb_new.png" style="width: 15%">
+          </a>
+        </li>
+        <li>
+          <a target="blank" href="">
+            <img src="images/instagram.png" style="width: 15%">
+          </a>
+        </li>
+        <li>
+          <a target="blank" href="">
+            <img src="images/ln_new.png" style="width: 15%">
+          </a>
+        </li>
+      </ul>
+  </div>
+
+
 </div>
 
   <script type="text/javascript">
       var $form = $(".contact_form");
+      $( "#contact_us_name" ).keypress(function() {
+          $(".name_required").css("display","none");
+      });
+      $( "#contact_us_email" ).keypress(function() {
+          $(".email_required").css("display","none");
+      });
+      $( "#contact_us_message" ).keypress(function() {
+          $(".message_required").css("display","none");
+      });
       $('.close-modal').on('click',function(){
-          $(".notifications").remove();
-          $("#overlay").remove();
+          $(".notifications").css("display","none");
+          $("#overlay").css("display","none");
       });
       $('#detail_submit').on('click',function(){
           var name = $("#contact_us_name").val();
           var email = $("#contact_us_email").val();
           var message = $("#contact_us_message").val();
-          $.ajax({
-              type: "POST",
-              url: $form.attr('action'),
-              data:{
-                client_name: name,
-                client_email: email,
-                client_message: message
-              }
-          });
-
+          if(name === "" && email=== "" && message === "" ){
+              $(".name_required").css("display","block");
+              $(".email_required").css("display","block");
+              $(".message_required").css("display","block");
+          }else if(name === "" && email=== ""){
+              $(".name_required").css("display","block");
+              $(".email_required").css("display","block");
+          }else if(email === "" && message === "" ){
+              $(".email_required").css("display","block");
+              $(".message_required").css("display","block");
+          }else if(message === "" && name === ""  ){
+              $(".name_required").css("display","block");
+              $(".message_required").css("display","block");
+          }else if(name === ""){
+              $(".name_required").css("display","block");
+          }else if(email === ""){
+              $(".email_required").css("display","block");
+          }else if(message === "") {
+              $(".message_required").css("display", "block");
+          }else{
+              $.ajax({
+                  type: "POST",
+                  url: $form.attr('action'),
+                  data:{
+                    client_name: name,
+                    client_email: email,
+                    client_message: message
+                  },
+                  success: function(data) {
+                      $(".notifications").show();
+                      $("#overlay").show();
+                      document.getElementById('contact_us_name').value = "";
+                      document.getElementById('contact_us_email').value = "";
+                      document.getElementById('contact_us_message').value = "";
+                  },
+                  error: function(data){
+                      alert("error message");
+                  }
+              });
+          }
       });
+      function validateEmail(email) {
+
+          var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+          validation = $(".invalid-email");
+          txt_email_value = $("#contact_us_email").val()
+
+          if (reg.test(txt_email_value) == false)
+          {
+              validation.css("display","block");
+              return false;
+          }
+          validation.css("display","none");
+          return true;
+
+      }
+      $(".close-modal").on('click',function(){
+          $(".notifications").css("display","none");
+          $("#overlay").css("display","none");
+      })
   </script>

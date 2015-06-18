@@ -27,9 +27,6 @@
     height: 400px;
 }
 
-ul li:after {
-    content: "|";
-}
 ul li:last-child:after {
     content: "";
 }
@@ -51,13 +48,14 @@ ul li:last-child:after {
 }
 
 .contact-us-form-wrapper .submenu-section {
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     text-align: left;
+    margin-top: 18px;
 }
 
 .submenu-section ul {
     list-style-type: none;
-    color: #888888;
+    color: #0099cc;
 }
 .submenu-section ul, .submenu-section ul li {
     margin: 0px;
@@ -94,7 +92,7 @@ label, legend {
     width: 100%;
     height: 100%;
     margin-bottom: 20px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid #57A0B6;
     outline: none;
     display: block;
     background: #f6f6f6;
@@ -183,4 +181,73 @@ textarea {
     margin: 20px auto 0;
     line-height: 60px;
     display: block;
+}
+
+.ul-error-list {
+    list-style: none;
+    padding: 0;
+    color: #0099cc;
+}
+
+.ul-error-list li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+}
+
+.contents{
+  font-family: "museo-sans", sans-serif;
+  font-size: 1.650rem;
+  font-weight: 500;
+}
+.contact-us-info-section{
+    float: left;
+    display: block;
+    width: 32%;
+    margin-left: 10%;
+    text-align: center;
+    margin-right: 16%;
+    margin-top: 26px;
+}
+.contact-us-info-section h4:first-child {
+    margin-top: 0;
+}
+.contact-us-info-section:last-child {
+    margin-right: 0;
+}
+.shared-headings, h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 9px;
+    line-height: 1em;
+    font-weight: 300;
+}
+.contact-us-main-section p{
+    margin-top: 0;
+    -webkit-padding-start: 0px;
+
+}
+.contact-us-info-section p a {
+    display: block;
+    color: #888888;
+    text-decoration: none;
+}
+ul.social-networks {
+    margin: 23px;
+    padding: 46px;
+    border: 0;
+    margin-top: 0px;
+    padding-top: 10px;
+    display:block;
+}
+
+ul.social-networks li {
+    list-style-image: none;
+    list-style-type: none;
+    margin-left: 0;
+    display: inline-block;
+    vertical-align: baseline;
+    zoom: 1;
+    white-space: nowrap;
+}
+.ss-twitter{
+
 }
