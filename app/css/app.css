@@ -63,13 +63,44 @@
 .mouse_hover{
   text-align: center;
   background-color: #000000;
-  transition: opacity, 0.5s;
   padding: 40px;
   position: absolute;
   left:15px;
   right:15px;
-  top:3px;
+  top:0;
   bottom: 22px;
   padding-top: 30%;
-  opacity:0.8
+  opacity:0.8;
+-webkit-transition: opacity, 0.8s;
+-moz-transition: opacity, 0.8s;
+  transition: opacity, 0.8s;
+}
+
+.hover_button{
+  padding: 13px 23px;
+  font-size: 20px;
+  background-color: #000000;
+  border-color: #ffffff;
+  color: white;
+}
+
+.nav_bar{
+  padding: 15px;
+  position: fixed;
+  width:100%;
+  z-index: 50;
+  transition: background-color, 0.5s;
+}
+
+.margin_zero{
+  margin: 0
+}
+/*Work css*/
+
+.margin_top{
+  margin-top: 60px
+}
+.hover_title{
+  color: #ffffff;
+  padding-bottom: 10px;
 }

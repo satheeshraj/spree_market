@@ -9,13 +9,9 @@
 
 
     $( document ).ready(function() {
-        document.getElementById("SuperMedWeb").onmouseover = function() {mouseOver(this)};
-        document.getElementById("SuperMedWeb").onmouseout = function(){mouseOut(this)};
-        document.getElementById("ScreenWeek").onmouseover = function() {mouseOver(this)};
-        document.getElementById("ScreenWeek").onmouseout = function(){mouseOut(this)};
-        document.getElementById("FanPrint").onmouseover = function() {mouseOver(this)};
-        document.getElementById("FanPrint").onmouseout = function(){mouseOut(this)};
-
+        $("#id2").hide();
+        $("#id4").hide();
+        $("#id6").hide();
         $(".links").mouseover(function(){
             $(this).css({'border-bottom': '2px solid'})
         }).mouseout(function(){
@@ -30,56 +26,31 @@
 
     });
 
-function mouseOut(e){
-    console.log(e.id);
-    if(e.id == 'SuperMedWeb'){
-        var t = "";
-        t +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        $('#SuperMedWeb').html(t).trigger('create');
-
-    }else if(e.id == 'ScreenWeek'){
-        var y = "";
-        y +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        $('#ScreenWeek').html(y).trigger('create');
-    }else if(e.id == 'FanPrint'){
-        var r = "";
-        r +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        $('#FanPrint').html(r).trigger('create');
-    }
-
-}
 
 function mouseOver(e){
-    console.log(e.id);
     if(e.id == 'SuperMedWeb'){
-        var t = "";
-        t +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        t += '<div class="mouse_hover" >';
-        t += '<h4 style="color: #ffffff">Supermedweb</h4>';
-        t += '<button type="button" class="btn btn-default" style="  padding: 13px 23px;  font-size: 20px;background-color: #000000; border-color: #ffffff; color: white">View Details</button>';
-        +'</div>';
-
-        $('#SuperMedWeb').html(t).trigger('create');
+        $("#id1").show();
+        $("#id2").show();
     }else if(e.id == 'ScreenWeek'){
-        var y = "";
-        y +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        y += '<div class="mouse_hover" >';
-        y += '<h4 style="color: #ffffff">ScreenWeek</h4>';
-        y += '<button type="button" class="btn btn-default" style="  padding: 13px 23px;  font-size: 20px;background-color: #000000; border-color: #ffffff; color: white">View Details</button>';
-        +'</div>';
-
-        $('#ScreenWeek').html(y).trigger('create');
+        $("#id3").show();
+        $("#id4").show();
     }else if(e.id == 'FanPrint'){
-        var r = "";
-        r +=' <a href="#" class="thumbnail"><img src="img/life.jpg" style="height: 242px;"></a>'
-        r += '<div class="mouse_hover" >';
-        r += '<h4 style="color: #ffffff">FanPrint</h4>';
-        r += '<button type="button" class="btn btn-default" style="  padding: 13px 23px;  font-size: 20px;background-color: #000000; border-color: #ffffff; color: white">View Details</button>';
-        r += '</div>';
-
-        $('#FanPrint').html(r).trigger('create');
+        $("#id5").show();
+        $("#id6").show();
     }
+}
 
+function mouseOut(e){
+    if(e.id == 'SuperMedWeb'){
+        $("#id1").show();
+        $("#id2").hide();
+    }else if(e.id == 'ScreenWeek'){
+        $("#id3").show();
+        $("#id4").hide();
+    }else if(e.id == 'FanPrint'){
+        $("#id5").show();
+        $("#id6").hide();
+    }
 }
 
 
