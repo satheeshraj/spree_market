@@ -32,10 +32,44 @@
   width: 83%;
   margin-left: 8.5%;
   text-align: center;
-  margin-top: 8%;
+  padding-bottom: 60px;
 }
 .format{
   margin-top: 25px;
   font-size: 20px;
   font-family: initial;
+}
+
+.sub-cont{
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 100px 20px 75px 20px;"
+}
+
+.thumb_header{
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.p_text{
+  font-size: 15px;
+  text-align: center;
+}
+.mouse_on{
+  background-color: #000000 !important;
+  color:#ffffff !important;
+}
+.mouse_hover{
+  text-align: center;
+  background-color: #000000;
+  transition: opacity, 0.5s;
+  padding: 40px;
+  position: absolute;
+  left:15px;
+  right:15px;
+  top:3px;
+  bottom: 22px;
+  padding-top: 30%;
+  opacity:0.8
 }
