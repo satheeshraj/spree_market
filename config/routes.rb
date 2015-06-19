@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'services' => 'services#index'
   get 'work' => 'work#index'
   get 'about' => 'about#index'
-
+  get '/contact_us' => 'contact_us#contact_us'
+  post '/submit' => 'contact_us#submit'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
