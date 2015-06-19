@@ -36,7 +36,7 @@ ul li:last-child:after {
 }
 .container {
     max-width: 1040px;
-    margin-left: auto;
+    margin-left: 16%;
     margin-right: auto;
 
 }
@@ -204,8 +204,8 @@ textarea {
     float: left;
     display: block;
     width: 32%;
-    margin-left: 10%;
-    text-align: center;
+    margin-left: 17%;
+    text-align: left;
     margin-right: 16%;
     margin-top: 26px;
 }
@@ -237,6 +237,7 @@ ul.social-networks {
     margin-top: 0px;
     padding-top: 10px;
     display:block;
+    padding-left: 0px;
 }
 
 ul.social-networks li {
