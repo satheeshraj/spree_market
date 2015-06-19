@@ -60,6 +60,10 @@
   background-color: #000000 !important;
   color:#ffffff !important;
 }
+.mouse_on_about{
+  background-color: #ffffff !important;
+  color:#000000 !important;
+}
 .mouse_hover{
   text-align: center;
   background-color: #000000;
@@ -71,9 +75,9 @@
   bottom: 22px;
   padding-top: 30%;
   opacity:0.8;
--webkit-transition: opacity, 0.8s;
--moz-transition: opacity, 0.8s;
-  transition: opacity, 0.8s;
+  -webkit-transition: opacity, 0.5s;
+  -moz-transition: opacity, 0.5s;
+  transition: opacity, 0.5s;
 }
 
 .hover_button{
@@ -84,6 +88,9 @@
   color: white;
 }
 
+.nav_float{
+  float: right !important
+}
 .nav_bar{
   padding: 15px;
   position: fixed;
@@ -103,4 +110,34 @@
 .hover_title{
   color: #ffffff;
   padding-bottom: 10px;
+}
+
+/*about us*/
+
+.carousel-indicators li{
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  /* margin: 1px; */
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 ;
+  /*background-color: rgba(0,0,0,0);*/
+  background: #d4d4d4;
+  /*border: 1px solid #333;*/
+  border-radius: 10px;
+}
+.carousel-indicators .active {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  background-color: #888;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .nav_float{
+    float:none !important;
+    text-align: center;
+  }
 }

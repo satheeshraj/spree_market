@@ -24,6 +24,11 @@
             $(this).removeClass('mouse_on')
         });
 
+        $("#button_2").mouseover(function(){
+            $(this).addClass('mouse_on_about')
+        }).mouseout(function(){
+            $(this).removeClass('mouse_on_about')
+        });
     });
 
 
@@ -60,7 +65,7 @@ $(window).scroll(function(){
   if(window_top != 0){
       $('#nav').css({'background-color': 'black','border-color':'black'})
    }else{
-      $(nav).scrollTop(function(){
+      $('#nav').scrollTop(function(){
           $(this).css({'background-color': 'transparent','border-color':'transparent'})
       })
 
