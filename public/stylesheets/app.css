@@ -26,3 +26,135 @@
     background-size: 100%;
     height: 400px;
 }
+
+.text{
+    float: left;
+    display: block;
+    width: 83%;
+    margin-left: 8.5%;
+    text-align: center;
+    padding-bottom: 60px;
+}
+.format{
+    margin-top: 25px;
+    font-size: 20px;
+    font-family: initial;
+}
+
+.sub-cont{
+    max-width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 100px 20px 75px 20px;"
+}
+
+.thumb_header{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.p_text{
+    font-size: 15px;
+    text-align: center;
+}
+.mouse_on{
+    background-color: #000000 !important;
+    color:#ffffff !important;
+}
+.mouse_on_about{
+    background-color: #ffffff !important;
+    color:#000000 !important;
+}
+.mouse_hover{
+    text-align: center;
+    background-color: #000000;
+    transition: opacity, 0.5s;
+    padding: 40px;
+    position: absolute;
+    left:15px;
+    right:15px;
+    top:0px;
+    bottom: 22px;
+    padding-top: 30%;
+    opacity:0.8;
+    -webkit-transition: opacity, 0.8s;
+    -moz-transition: opacity, 0.8s;
+    transition: opacity, 0.8s;
+}
+
+.hover_button{
+    padding: 13px 23px;
+    font-size: 20px;
+    background-color: #000000;
+    border-color: #ffffff;
+    color: white;
+}
+
+.nav_bar{
+    padding: 15px;
+    position: fixed;
+    width:100%;
+    z-index: 50;
+    transition: background-color, 0.5s;
+}
+
+.margin_zero{
+    margin: 0
+}
+/*Work css*/
+
+.margin_top{
+    margin-top: 60px
+}
+.hover_title{
+    color: #ffffff;
+    padding-bottom: 10px;
+}
+
+
+/*about us*/
+
+.carousel-indicators li{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    /* margin: 1px; */
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #000 ;
+    /*background-color: rgba(0,0,0,0);*/
+    background: #d4d4d4;
+    /*border: 1px solid #333;*/
+    border-radius: 10px;
+}
+.carousel-indicators .active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: #888;
+}
+.sub-cont {
+    border-bottom: 1px solid #e6e6e6;
+}
+.flex-control-paging li a:hover {
+    background: #333;
+}
+.carousel-indicators li  {
+    width: 9px;
+    height: 9px;
+    display: block;
+    background: #d4d4d4;
+    cursor: pointer;
+    text-indent: -9999px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -o-border-radius: 20px;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .nav_float{
+        float:none !important;
+        text-align: center;
+    }
+}
