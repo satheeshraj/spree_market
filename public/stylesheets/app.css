@@ -61,6 +61,7 @@
     background-color: #000000 !important;
     color:#ffffff !important;
 }
+
 .mouse_on_about{
     background-color: #ffffff !important;
     color:#000000 !important;
@@ -387,6 +388,10 @@
         zoom: 1;
         white-space: nowrap;
     }
+    .text-align{
+        text-align: left;
+    }
+
 .nav_float{
     float: right !important
 }
@@ -395,4 +400,11 @@
         float: none !important;
         text-align: center;
     }
+    .text-align{
+        text-align: center;
+    }
+    .contact-us-info-section {
+        display: none;
+    }
+
 }

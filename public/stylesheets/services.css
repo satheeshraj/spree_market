@@ -56,7 +56,7 @@ ul li:last-child:after {
     vertical-align: baseline;
     zoom: 1;
     width: 200px;
-    height: 200px;
+    height: 165px;
 }
 
 .mobile_shopping-icon {
@@ -170,7 +170,6 @@ ul li:last-child:after {
 }
 .with-small-icons .svg-icon, .home-services-section .svg-icon, .with-left-images .svg-icon, .services-webdevelopment-section .svg-icon, .services-marketing-section .svg-icon, .services-ecommerce-section .svg-icon, .services-webdesign-section .svg-icon, .open-source-section .svg-icon, .with-small-icons .notifications .notification:before, .notifications .with-small-icons .notification:before, .home-services-section .notifications .notification:before, .notifications .home-services-section .notification:before, .with-left-images .notifications .notification:before, .notifications .with-left-images .notification:before, .services-webdevelopment-section .notifications .notification:before, .notifications .services-webdevelopment-section .notification:before, .services-marketing-section .notifications .notification:before, .notifications .services-marketing-section .notification:before, .services-ecommerce-section .notifications .notification:before, .notifications .services-ecommerce-section .notification:before, .services-webdesign-section .notifications .notification:before, .notifications .services-webdesign-section .notification:before, .open-source-section .notifications .notification:before, .notifications .open-source-section .notification:before, .with-small-icons .nav-toggle, .home-services-section .nav-toggle, .with-left-images .nav-toggle, .services-webdevelopment-section .nav-toggle, .services-marketing-section .nav-toggle, .services-ecommerce-section .nav-toggle, .services-webdesign-section .nav-toggle, .open-source-section .nav-toggle, .with-small-icons .logo a, .logo .with-small-icons a, .home-services-section .logo a, .logo .home-services-section a, .with-left-images .logo a, .logo .with-left-images a, .services-webdevelopment-section .logo a, .logo .services-webdevelopment-section a, .services-marketing-section .logo a, .logo .services-marketing-section a, .services-ecommerce-section .logo a, .logo .services-ecommerce-section a, .services-webdesign-section .logo a, .logo .services-webdesign-section a, .open-source-section .logo a, .logo .open-source-section a, .with-small-icons .projects-section .projects-list li .project-image, .projects-section .projects-list li .with-small-icons .project-image, .home-services-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .home-services-section .project-image, .with-left-images .projects-section .projects-list li .project-image, .projects-section .projects-list li .with-left-images .project-image, .services-webdevelopment-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-webdevelopment-section .project-image, .services-marketing-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-marketing-section .project-image, .services-ecommerce-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-ecommerce-section .project-image, .services-webdesign-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .services-webdesign-section .project-image, .open-source-section .projects-section .projects-list li .project-image, .projects-section .projects-list li .open-source-section .project-image, .with-small-icons .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .with-small-icons .project-image, .home-services-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .home-services-section .project-image, .with-left-images .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .with-left-images .project-image, .services-webdevelopment-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-webdevelopment-section .project-image, .services-marketing-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-marketing-section .project-image, .services-ecommerce-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-ecommerce-section .project-image, .services-webdesign-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .services-webdesign-section .project-image, .open-source-section .home-projects-section .projects-list li .project-image, .home-projects-section .projects-list li .open-source-section .project-image {
     width: 150px;
-    height: 150px;
 }
 .maintenance-icon {
     background: url("/images/maintenance.png") no-repeat top left;
@@ -332,11 +331,9 @@ ul li:last-child:after {
 .services-spree-section .spree-image:last-child {
     margin-right: 0;
 }
-.services-spree-section .spree-image {
-    float: left;
+.spree-image {
     display: block;
-    margin-right: 2%;
-    width: 49%;
+    width: 100%;
     height: 270px;
     background-image: url("/images/spree_partnership.jpg");
     background-repeat: no-repeat;

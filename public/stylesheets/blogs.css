@@ -144,3 +144,13 @@ h6 {
     z-index: 3;
     margin-left: 20px;
 }
+.blog article .index-summary a img {
+    width: 100%;
+}
+.blog article header h1 a {
+    text-decoration: none;
+    color: #000;
+}
+.blog article header h1 a:hover {
+    color: #04467E;
+}
