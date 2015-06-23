@@ -6,9 +6,9 @@ Rails.application.routes.draw do
   # root 'welcome#index'
 
   get '/' => 'dashboard#index'
-  get 'services' => 'services#index'
-  get 'work' => 'work#index'
-  get 'about' => 'about#index'
+  get '/services' => 'services#index'
+  get '/work' => 'work#index'
+  get '/about' => 'about#index'
   get '/contact_us' => 'contact_us#contact_us'
   post '/submit' => 'contact_us#submit'
   get '/blogs' => 'blogs#blog'

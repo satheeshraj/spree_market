@@ -30,7 +30,9 @@ $( document ).ready(function() {
         $(this).removeClass('mouse_on_about')
     });
 });
-
+$('.navbar-toggle').click(function(){
+   alert("hi1")
+});
 
 function mouseOver(e){
     if(e.id == 'SuperMedWeb'){
