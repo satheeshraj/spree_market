@@ -1,7 +1,12 @@
 .blog{
     margin-top: -7px;
-    width: 101%;
-    margin-left: -5px;
+    width: 100%;
+}
+.blog .header-bar .twitter-box {
+    display: inline;
+    float: right;
+    text-align: right;
+    margin-top: 25px;
 }
 .blog .header-bar {
     position: relative;
@@ -22,7 +27,7 @@
     padding: 0;
     z-index: 50;
 }
-header, hgroup, nav, section, summary {
+header, .hgroup, nav, section, summary {
     display: block;
 }
 .blog .header-bar .container {
@@ -58,11 +63,6 @@ header, hgroup, nav, section, summary {
     margin-top: 0;
     -webkit-padding-start: 0px;
 }
-.header-bar .logo a {
-    background: url("/images/icons/png/logo_blog-ca168ef2.png") no-repeat top left;
-    background-image: url("/images/icons/svg/logo_blog-eb1edcb5.svg"),none;
-    background-size: contain;
-}
 .header-bar a {
     color: #0099cc;
 }
@@ -74,11 +74,6 @@ header, hgroup, nav, section, summary {
 a {
     color: #888888;
     text-decoration: none;
-}
-.logo a {
-    background: url("/images/icons/png/logo-9d3b1682.png") no-repeat top left;
-    background-image: url("/images/icons/svg/logo-ef0c3017.svg"),none;
-    background-size: contain;
 }
 .logo a:before {
     content: "";

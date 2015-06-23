@@ -100,7 +100,7 @@
 }
 
 .margin_zero{
-    margin: 0
+    margin: 0 !important;
 }
 /*Work css*/
 
@@ -395,6 +395,19 @@
 .nav_float{
     float: right !important
 }
+.back-to-top{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    width: 61px;
+    height: 61px;
+    background: url(../images/back_to_top.png);
+    display: none;
+    -webkit-backface-visibility: hidden;
+    z-index: 1000;
+
+}
+
 @media only screen and (max-width: 768px) {
     .nav_float {
         float: none !important;

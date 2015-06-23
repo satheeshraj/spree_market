@@ -7,8 +7,10 @@
 //spreeMarket.controller('MainCtrl',['$scope','$log',function($scope,$log){
 
 
+var nav_show = true;
 
 $( document ).ready(function() {
+    $('#back_to_top').removeClass('back_to_top');
     $("#id2").hide();
     $("#id4").hide();
     $("#id6").hide();
@@ -29,9 +31,25 @@ $( document ).ready(function() {
     }).mouseout(function(){
         $(this).removeClass('mouse_on_about')
     });
-});
-$('.navbar-toggle').click(function(){
-   alert("hi1")
+
+    $('.navbar-toggle').click(function(){
+        if(nav_show == true)
+        {
+
+            $('#bs-example-navbar-collapse-1').show(1000);
+            nav_show = false;
+        }
+        else{
+            $('#bs-example-navbar-collapse-1').hide(1000);
+            nav_show = true;
+        }
+    });
+
+    $('.back-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
 });
 
 function mouseOver(e){
@@ -66,8 +84,10 @@ $(window).scroll(function(){
     var window_top = $(window).scrollTop();
     if(window_top != 0){
         $('#nav').css({'background-color': 'black','border-color':'black'})
+        $('#backToTop').addClass('back_to_top').fadeIn();
     }else{
         $('#nav').scrollTop(function(){
+            $('#backToTop').removeClass('back_to_top').fadeOut();
             $(this).css({'background-color': 'transparent','border-color':'transparent'})
         })
 
