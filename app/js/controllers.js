@@ -8,28 +8,35 @@
 
 
 
-    $( document ).ready(function() {
-        $("#id2").hide();
-        $("#id4").hide();
-        $("#id6").hide();
-        $(".links").mouseover(function(){
-            $(this).css({'border-bottom': '2px solid'})
-        }).mouseout(function(){
-            $(this).css({'border-bottom': 'none'})
-        });
-
-        $("#button_1").mouseover(function(){
-            $(this).addClass('mouse_on')
-        }).mouseout(function(){
-            $(this).removeClass('mouse_on')
-        });
-
-        $("#button_2").mouseover(function(){
-            $(this).addClass('mouse_on_about')
-        }).mouseout(function(){
-            $(this).removeClass('mouse_on_about')
-        });
+$( document ).ready(function() {
+    $('#back_to_top').removeClass('back_to_top');
+    $("#id2").hide();
+    $("#id4").hide();
+    $("#id6").hide();
+    $(".links").mouseover(function(){
+        $(this).css({'border-bottom': '2px solid'})
+    }).mouseout(function(){
+        $(this).css({'border-bottom': 'none'})
     });
+
+    $("#button_1").mouseover(function(){
+        $(this).addClass('mouse_on')
+    }).mouseout(function(){
+        $(this).removeClass('mouse_on')
+    });
+
+    $("#button_2").mouseover(function(){
+        $(this).addClass('mouse_on_about')
+    }).mouseout(function(){
+        $(this).removeClass('mouse_on_about')
+    });
+
+    $('.back-to-top').click(function(){
+        $('html, body').animate({scrollTop : 0},800);
+        return false;
+    });
+
+});
 
 
 function mouseOver(e){
@@ -59,17 +66,16 @@ function mouseOut(e){
 }
 
 
-
 $(window).scroll(function(){
    var window_top = $(window).scrollTop();
-  if(window_top != 0){
-      $('#nav').css({'background-color': 'black','border-color':'black'})
+   if(window_top != 0){
+       $('#nav').css({'background-color': 'black','border-color':'black'});
+       $('#backToTop').addClass('back_to_top').fadeIn();
    }else{
-      $('#nav').scrollTop(function(){
-          $(this).css({'background-color': 'transparent','border-color':'transparent'})
-      })
-
-  }
+       $('#nav').scrollTop(function(){
+           $('#backToTop').removeClass('back_to_top').fadeOut();
+           $(this).css({'background-color': 'transparent','border-color':'transparent'})
+       })
+   }
 });
 
-//}]);
