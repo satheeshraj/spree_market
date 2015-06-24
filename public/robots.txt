@@ -4,4 +4,4 @@
 # User-agent: *
  Disallow: /config/
  Disallow: /bin/
- Disallow: /blogs/
+ allow: /
